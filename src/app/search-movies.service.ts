@@ -16,8 +16,6 @@ export class SearchMoviesService {
   ) { }
 
   getMovies(search: string): Observable<string[]> {
-    console.log('to aqui');
-
     return this.http.get<string[]>(this.searchApi + search + '&page=1&include_adult=false');
   }
 }

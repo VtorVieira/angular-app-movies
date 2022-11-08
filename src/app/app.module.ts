@@ -5,14 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { SearchBarComponent } from './search-bar/search-bar.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { UpcommingComponent } from './components/pages/upcomming/upcomming.component';
+import { PopularComponent } from './components/pages/popular/popular.component';
+import { PlayingComponent } from './components/pages/playing/playing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
-    SearchBarComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    UpcommingComponent,
+    PopularComponent,
+    PlayingComponent,
   ],
   imports: [
     BrowserModule,
