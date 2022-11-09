@@ -2,30 +2,30 @@
   margin-top: 0.8em;
 }
 
-.popular-container {
+.upcoming-container {
   display: flex;
   flex-wrap: wrap;
   max-width: 80%;
   margin: 0 auto;
 }
 
-.popular {
+.upcoming {
   width: 25%;
   margin-bottom: 1em;
   text-align: center;
 }
 
-.popular:hover {
+.upcoming:hover {
   box-shadow: 1px 6px 6px 1px rgba(0, 0, 0, 0.1);
 }
 
-.popular img {
+.upcoming img {
   width: 70%;
   margin-bottom: 0.5em;
   border-radius: 5px;
 }
 
-.popular span {
+.upcoming span {
   font-weight: bold;
 }
 

@@ -5,19 +5,19 @@ import { SearchMoviesService } from 'src/app/search-movies.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-popular',
-  templateUrl: './popular.component.html',
-  styleUrls: ['./popular.component.scss']
+  selector: 'app-upcomming',
+  templateUrl: './upcoming.component.html',
+  styleUrls: ['./upcoming.component.scss']
 })
-export class PopularComponent implements OnInit {
-  popularMovies: Movies[] = [];
+export class UpcommingComponent implements OnInit {
+  upcomingMovies: Movies[] = [];
 
   constructor(
-    private popularService: SearchMoviesService,
+    private upcomingService: SearchMoviesService,
   ) { }
 
   ngOnInit(): void {
-    this.popularService.getPopularMovies().subscribe((movies) => {
+    this.upcomingService.getUpcomingMovies().subscribe((movies) => {
       const data = movies.results;
 
       data.map((movie) => {
@@ -25,7 +25,7 @@ export class PopularComponent implements OnInit {
         movie.backdrop_path = `${environment.imgPath}${movie.backdrop_path}`;
       });
 
-      this.popularMovies = data;
+      this.upcomingMovies = data;
     });
   }
 

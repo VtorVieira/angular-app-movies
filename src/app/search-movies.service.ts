@@ -1,21 +1,39 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
-import { Observable, throwError } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+
+import { Movies } from './interfaces/Moveis';
+import { Response } from './interfaces/Response';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SearchMoviesService {
-  private popularApi = 'https://api.themoviedb.org/3/movie/upcoming?api_key=32b2538fae9d6a2e14d1539dde85893f&language=en-US&page=1';
-  private searchApi = 'https://api.themoviedb.org/3/search/movie?api_key=32b2538fae9d6a2e14d1539dde85893f&language=en-US&query=';
+  private searchApi = `${environment.baseApiUrl}search/movie?api_key=${environment.apiKey}&language=en-US&&query=`;
+  private popularApi = `${environment.baseApiUrl}/movie/popular?api_key=${environment.apiKey}&language=en-US&page=1`;
+  private upcomingApi = `${environment.baseApiUrl}/movie/upcoming?api_key=${environment.apiKey}&language=en-US&page=1`;
+  private playingApi = `${environment.baseApiUrl}/movie/now_playing?api_key=${environment.apiKey}&language=en-US&page=1`;
 
   constructor(
     private http: HttpClient
   ) { }
 
-  getMovies(search: string): Observable<string[]> {
-    return this.http.get<string[]>(this.searchApi + search + '&page=1&include_adult=false');
+  getPopularMovies(): Observable<Response<Movies[]>> {
+    return this.http.get<Response<Movies[]>>(this.popularApi);
+  }
+
+  getUpcomingMovies(): Observable<Response<Movies[]>> {
+    return this.http.get<Response<Movies[]>>(this.upcomingApi);
+  }
+
+  getPlayingMovies(): Observable<Response<Movies[]>> {
+    return this.http.get<Response<Movies[]>>(this.playingApi);
+  }
+
+  getSearchMovie(search: string): Observable<Response<Movies[]>> {
+    const url = `${this.searchApi}${search}&page=1&include_adult=false`;
+    return this.http.get<Response<Movies[]>>(url);
   }
 }

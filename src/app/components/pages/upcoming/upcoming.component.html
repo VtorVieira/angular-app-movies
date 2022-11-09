@@ -1,7 +1,7 @@
 <div class="container">
-  <div *ngIf="popularMovies.length > 0">
-    <div class="popular-container">
-      <div class="popular" *ngFor="let movie of popularMovies">
+  <div *ngIf="upcomingMovies.length > 0">
+    <div class="upcoming-container">
+      <div class="upcoming" *ngFor="let movie of upcomingMovies">
         <img src="{{movie.backdrop_path}}" alt="{{movie.original_title}}">
         <p id="title">{{movie.original_title}}</p>
         <p><span>Nota:</span> {{movie.vote_average}}</p>
