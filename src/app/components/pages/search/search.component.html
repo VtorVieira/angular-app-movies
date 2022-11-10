@@ -1,0 +1,17 @@
+<div class="container">
+  <div *ngIf="searchMovies.length > 0 else noMovies">
+    <div class="search-container">
+      <div class="search" *ngFor="let movie of searchMovies">
+        <img src="{{movie.backdrop_path}}" alt="{{movie.original_title}}">
+        <p id="title">{{movie.original_title}}</p>
+        <p><span>Nota:</span> {{movie.vote_average}}</p>
+        <p><span>Data:</span> {{movie.release_date}}</p>
+      </div>
+    </div>
+  </div>
+  <ng-template #noMovies>
+    <div class="notFound">
+      <h2>Nenhum filme foi encontrado!</h2>
+    </div>
+  </ng-template>
+</div>

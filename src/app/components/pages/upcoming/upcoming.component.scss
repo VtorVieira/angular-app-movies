@@ -1,0 +1,38 @@
+.container {
+  margin-top: 0.8em;
+}
+
+.upcoming-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.upcoming {
+  width: 25%;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.upcoming:hover {
+  box-shadow: 1px 6px 6px 1px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming img {
+  width: 70%;
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+}
+
+.upcoming span {
+  font-weight: bold;
+}
+
+.upcoming a {
+  text-decoration: underline;
+}
+
+#title {
+  font-weight: bold;
+}

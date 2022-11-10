@@ -1,0 +1,21 @@
+<div>
+  <div *ngIf="playingMovies.length > 0">
+    <div class="playing-container" *ngFor="let movie of playingMovies">
+      <div>
+        <a routerLink="/details/{{movie.id}}"><img src="{{movie.backdrop_path}}" alt="{{movie.original_title}}"></a>
+      </div>
+      <div class="playing-text">
+        <div class="text">
+          <span>Titulo</span>
+          <p id="title"><a routerLink="/details/{{movie.id}}">{{movie.original_title}}</a></p>
+          <span>Sinopse</span>
+          <p>{{movie.overview}}</p>
+          <span>Nota:</span>
+          <p>{{movie.vote_average}}</p>
+          <span>Data:</span>
+          <p>{{movie.release_date}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

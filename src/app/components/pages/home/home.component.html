@@ -1,0 +1,22 @@
+<div class="home-container">
+  <div class="search-container">
+    <form>
+      <fa-icon [icon]="faSearch"></fa-icon>
+      <input type="text" placeholder="Busque um filme" (input)="search($event)">
+      <div>
+        <button class="searchBtn" type="button" (click)="sendSearch()">Pesquisar</button>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="allMovies.length > 0">
+    <h3>Os Mais Populares</h3>
+    <div class="popular-container">
+      <div class="popular" *ngFor="let movie of allMovies">
+        <a routerLink="/details/{{movie.id}}"><img src="{{movie.backdrop_path}}" alt="{{movie.original_title}}"></a>
+        <p><a routerLink="/details/{{movie.id}}">{{movie.original_title}}</a></p>
+        <p><span>Nota:</span> {{movie.vote_average}}</p>
+        <p><span>Data:</span> {{movie.release_date}}</p>
+      </div>
+    </div>
+  </div>
+</div>

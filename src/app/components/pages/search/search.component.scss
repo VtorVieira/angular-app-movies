@@ -1,0 +1,41 @@
+.container {
+  margin-top: 0.8em;
+}
+
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.search {
+  width: 25%;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.search:hover {
+  box-shadow: 1px 6px 6px 1px rgba(0, 0, 0, 0.1);
+}
+
+.search img {
+  width: 70%;
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+}
+
+.search span {
+  font-weight: bold;
+}
+
+.notFound {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 0.8em;
+}
+
+#title {
+  font-weight: bold;
+}

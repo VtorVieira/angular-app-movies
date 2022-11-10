@@ -1,0 +1,51 @@
+.container {
+  height: 100vh;
+}
+
+.detail-container {
+  display: flex;
+  margin-top: 3%;
+  gap: 50px;
+}
+
+.detail-container img {
+  margin-left: 3em;
+  width: 85%;
+}
+
+.detail-context {
+  line-height: 30px;
+  width: 65%;
+}
+
+.detail-context span {
+  font-weight: bold;
+}
+
+.detail-context span a {
+  font-weight: bold;
+  color: blue;
+  text-decoration: underline;
+}
+
+.recommendation-container {
+  margin-top: 2em;
+}
+
+.recommendation-container span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 2.5em;
+}
+
+.recommendation {
+  display: flex;
+  gap: 10px;
+  margin-left: 3em;
+  margin-right: 3em;
+  overflow-y: auto;
+}
+
+.recommendation-context {
+  margin-top: 1em;
+}
