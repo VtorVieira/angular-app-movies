@@ -2,7 +2,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 1em;
-  border-bottom: 1px solid #777;
+  border-bottom: 1px solid #dec129;
 }
 
 .brand,
@@ -32,12 +32,4 @@ nav {
 
 .links a {
   padding: 0.1em 0.3em;
-}
-
-#add a {
-  color: #dec129;
-}
-
-#add a:hover {
-  background-color: #efefef;
 }
