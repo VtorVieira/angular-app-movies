@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { IDetailMovie } from 'src/app/interfaces/DetailMovie';
 import { IGenres } from 'src/app/interfaces/Genres';
 import { IRecommendation } from 'src/app/interfaces/Recommendation';
+
 import { SearchMoviesService } from 'src/app/search-movies.service';
 import { environment } from 'src/environments/environment';
 
@@ -17,12 +18,13 @@ export class DetailsComponent implements OnInit {
   recommendations: IRecommendation[] = [];
 
   constructor(
-    private route: ActivatedRoute,
+    private route: ActivatedRoute, // rota necessária para pegar o parametro da URL
     private detailService: SearchMoviesService,
     private recommendationService: SearchMoviesService,
   ) { }
 
   ngOnInit(): void {
+    /* Pega o id da URL */
     const id = Number(this.route.snapshot.paramMap.get("id"));
 
     /* Detail */
@@ -33,7 +35,6 @@ export class DetailsComponent implements OnInit {
         movie.backdrop_path = `${environment.detailImgPath}${movie.backdrop_path}`;
         movie.genres = (movie.genres.map((genre: IGenres) => ` ${genre.name}`));
         movie.runtime = this.convertHour(movie.runtime);
-        console.log(movie);
       });
 
       this.detailMovie = data;

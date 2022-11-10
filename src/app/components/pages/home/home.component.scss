@@ -25,6 +25,16 @@
   text-align: center;
 }
 
+.popular a {
+  text-decoration: underline;
+}
+
+.popular span,
+a {
+  font-weight: bold;
+}
+
+
 .popular:hover {
   box-shadow: 1px 6px 6px 1px rgba(0, 0, 0, 0.1);
 }
