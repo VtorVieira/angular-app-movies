@@ -26,6 +26,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@ngrx/store": "^14.3.2",
     "@ngrx/store-devtools": "^14.3.2",
+    "mdb-angular-ui-kit": "^3.0.0",
     "ng-image-slider": "^6.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
