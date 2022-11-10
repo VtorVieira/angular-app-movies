@@ -1,8 +1,5 @@
 import { createAction, createReducer, on, props } from "@ngrx/store";
-
-export interface ISearchTerm {
-  searchMovie: string;
-}
+import { ISearchTerm } from "../interfaces/SearchTerm";
 
 export const appInitialStateState: ISearchTerm = {
   searchMovie: ''

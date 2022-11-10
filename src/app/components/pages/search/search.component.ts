@@ -1,10 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { map } from 'rxjs';
 
 import { IMovies } from 'src/app/interfaces/Moveis';
+import { ISearchTerm } from 'src/app/interfaces/SearchTerm';
+
 import { SearchMoviesService } from 'src/app/search-movies.service';
-import { ISearchTerm } from 'src/app/store/store.state';
 import { environment } from 'src/environments/environment';
 
 @Component({

@@ -15,7 +15,11 @@ export class ReviewsComponent implements OnInit {
   reviewsMovie: IReviewsMovie[] = [];
   image: IDetailMovie[] = [];
 
-  constructor(private route: ActivatedRoute, private reviweService: SearchMoviesService, private detailService: SearchMoviesService,) { }
+  constructor(
+    private route: ActivatedRoute,
+    private reviweService: SearchMoviesService,
+    private detailService: SearchMoviesService,
+  ) { }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get("id"));
@@ -30,10 +34,8 @@ export class ReviewsComponent implements OnInit {
     });
 
     /* reviews */
-
     this.reviweService.getReviewsMovie(id).subscribe((movie) => {
       const data = movie.results;
-      console.log(movie);
       data.map((movie) => {
         movie.created_at = new Date(movie.created_at!).toLocaleDateString('pt-BR');
       });
