@@ -29,6 +29,7 @@
 }
 
 .recommendation-container {
+  width: 100%;
   margin-top: 2em;
 }
 
@@ -40,12 +41,22 @@
 
 .recommendation {
   display: flex;
+  width: 90%;
   gap: 10px;
   margin-left: 3em;
   margin-right: 3em;
-  overflow-y: auto;
+  overflow-x: scroll;
 }
 
 .recommendation-context {
   margin-top: 1em;
+}
+
+.recommendation-context p {
+  font-weight: bold;
+  text-align: center;
+}
+
+.images {
+  width: 250px;
 }

@@ -22,7 +22,10 @@
     <span>Recomendações</span>
     <div class="recommendation">
       <div class="recommendation-context" *ngFor="let recommendation of recommendations">
-        <img src="{{recommendation.backdrop_path}}" alt="{{recommendation.title}}">
+        <div class="images">
+          <a routerLink="/details/{{recommendation.id}}"><img src="{{recommendation.backdrop_path}}"
+              alt="{{recommendation.title}}"></a>
+        </div>
         <p>{{recommendation.title}}</p>
       </div>
     </div>
