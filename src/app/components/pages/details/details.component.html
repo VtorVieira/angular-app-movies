@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="detail-container" *ngFor="let movie of detailMovie">
+    <div>
+      <img src="{{movie.backdrop_path}}" alt="{{movie.title}}">
+    </div>
+    <div class="detail-context">
+      <span>Titulo:</span>
+      <p>{{movie.title}} ({{movie.release_date}})</p>
+      <span>Data de Lançamento:</span>
+      <p>{{movie.release_date}}</p>
+      <span>Gênero:</span>
+      <p>{{movie.genres}}</p>
+      <span>Duração:</span>
+      <p>{{movie.runtime}}</p>
+      <span><a routerLink="/reviews/{{movie.id}}">Avaliação</a></span>
+      <p>{{movie.tagline}}</p>
+      <span>Sinopse: </span>
+      <p>{{movie.overview}}</p>
+    </div>
+  </div>
+  <div class="recommendation-container">
+    <span>Recomendações</span>
+    <div class="recommendation">
+      <div class="recommendation-context" *ngFor="let recommendation of recommendations">
+        <img src="{{recommendation.backdrop_path}}" alt="{{recommendation.title}}">
+        <p>{{recommendation.title}}</p>
+      </div>
+    </div>
+  </div>
+</div>

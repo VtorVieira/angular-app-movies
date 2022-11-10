@@ -19,6 +19,7 @@ import { UpcommingComponent } from './components/pages/upcoming/upcoming.compone
 import { appReducer } from './store/store.state';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { DetailsComponent } from './components/pages/details/details.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { environment } from '../environments/environment';
     PlayingComponent,
     SearchComponent,
     UpcommingComponent,
+    DetailsComponent,
   ],
   imports: [
     FormsModule,

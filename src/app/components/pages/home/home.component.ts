@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { map } from 'rxjs';
 
-import { Movies } from 'src/app/interfaces/Moveis';
+import { IMovies } from 'src/app/interfaces/Moveis';
 import { SearchMoviesService } from 'src/app/search-movies.service';
 import { environment } from 'src/environments/environment';
 
@@ -17,7 +17,7 @@ import { ISearchTerm, searchAction } from 'src/app/store/store.state';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  allMovies: Movies[] = [];
+  allMovies: IMovies[] = [];
   searchTerm: string = "";
 
   faSearch = faSearch;

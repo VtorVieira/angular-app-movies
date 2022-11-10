@@ -1,4 +1,4 @@
-export interface Response<T> {
+export interface IResponse<T> {
   page?: number,
   results: T;
 }

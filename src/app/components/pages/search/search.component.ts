@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { map } from 'rxjs';
 
-import { Movies } from 'src/app/interfaces/Moveis';
+import { IMovies } from 'src/app/interfaces/Moveis';
 import { SearchMoviesService } from 'src/app/search-movies.service';
 import { ISearchTerm } from 'src/app/store/store.state';
 import { environment } from 'src/environments/environment';
@@ -13,7 +13,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-  searchMovies: Movies[] = [];
+  searchMovies: IMovies[] = [];
 
   constructor(
     private store: Store<{ app: ISearchTerm; }>,
