@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="review-container">
+    <div *ngFor="let image of image" class="image-container">
+      <img src="{{image.backdrop_path}}" alt="{{image.title}}">
+    </div>
+    <div>
+      <div *ngFor="let review of reviewsMovie">
+        <div class="review-context">
+          <p><span>Nome:</span> {{review.author}} ({{review.created_at}})</p>
+          <p><span>Nota:</span>{{review.author_details.rating}}</p>
+          <span>Conteúdo:</span>
+          <p class="context">{{review.content}}</p>
+          <hr />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

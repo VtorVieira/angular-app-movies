@@ -8,6 +8,7 @@ import { IMovies } from './interfaces/Moveis';
 import { IResponse } from './interfaces/Response';
 import { IDetailMovie } from './interfaces/DetailMovie';
 import { IRecommendation } from './interfaces/Recommendation';
+import { IReviewsMovie } from './interfaces/Reviews';
 
 @Injectable({
   providedIn: 'root'
@@ -50,8 +51,8 @@ export class SearchMoviesService {
     return this.http.get<IResponse<IRecommendation[]>>(url);
   }
 
-  getReviewsMovie(movieId: number): Observable<IResponse<IMovies[]>> {
+  getReviewsMovie(movieId: number): Observable<IResponse<IReviewsMovie[]>> {
     const url = `${this.baseApi}/movie/${movieId}/reviews?api_key=${environment.apiKey}&language=en-US&page=1`;
-    return this.http.get<IResponse<IMovies[]>>(url);
+    return this.http.get<IResponse<IReviewsMovie[]>>(url);
   }
 }

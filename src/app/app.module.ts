@@ -20,6 +20,7 @@ import { appReducer } from './store/store.state';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { DetailsComponent } from './components/pages/details/details.component';
+import { ReviewsComponent } from './components/pages/reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { DetailsComponent } from './components/pages/details/details.component';
     SearchComponent,
     UpcommingComponent,
     DetailsComponent,
+    ReviewsComponent,
   ],
   imports: [
     FormsModule,
